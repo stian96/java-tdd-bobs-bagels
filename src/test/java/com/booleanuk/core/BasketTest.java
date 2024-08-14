@@ -30,7 +30,23 @@ class BasketTest {
         basket.addBagel("normal", 1);
         basket.addBagel("special", 2);
 
+        // Check if it returns true when not full.
         boolean hasMoreSpace = basket.hasCapacity();
         Assertions.assertTrue(hasMoreSpace);
+
+        // Check if it returns false when full.
+        basket.addBagel("tasteless", 3);
+        Assertions.assertFalse(basket.hasCapacity());
     }
+
+    @Test
+    public void changeBasketCapacity() {
+        Basket basket = new Basket();
+        basket.changeBasketCapacity(10);
+
+        Assertions.assertTrue(basket.max == 10);
+    }
+
+
+
 }
