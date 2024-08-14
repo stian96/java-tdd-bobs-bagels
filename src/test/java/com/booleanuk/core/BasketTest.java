@@ -10,7 +10,7 @@ class BasketTest {
         Basket basket = new Basket();
         basket.addBagel("normal", 1);
 
-        Assertions.assertTrue(basket.items.length != 0);
+        Assertions.assertFalse(basket.items.isEmpty());
     }
 
 }
