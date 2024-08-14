@@ -44,7 +44,7 @@ class BasketTest {
         Basket basket = new Basket();
         basket.changeBasketCapacity(10);
 
-        Assertions.assertTrue(basket.max == 10);
+        Assertions.assertEquals(10, basket.max);
     }
 
 

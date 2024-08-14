@@ -28,6 +28,7 @@ public class Basket {
     }
 
     public void changeBasketCapacity(int limit) {
+        this.max = limit;
     }
 
 }
