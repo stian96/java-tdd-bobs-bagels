@@ -14,4 +14,8 @@ public class Basket {
         this.items.put(type, quantity);
     }
 
+    public void removeBagel(String key) {
+        this.items.remove(key);
+    }
+
 }
