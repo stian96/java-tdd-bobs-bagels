@@ -13,4 +13,15 @@ class BasketTest {
         Assertions.assertFalse(basket.items.isEmpty());
     }
 
+    @Test
+    public void testRemoveBagelRemovesBagelFromBasket() {
+        Basket basket = new Basket();
+        basket.addBagel("normal", 1);
+
+        // Then we remove the bagel.
+        basket.removeBagel("normal");
+
+        Assertions.assertTrue(basket.items.isEmpty());
+    }
+
 }
