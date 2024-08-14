@@ -18,4 +18,8 @@ public class Basket {
         this.items.remove(key);
     }
 
+    public boolean hasCapacity() {
+        return false;
+    }
+
 }

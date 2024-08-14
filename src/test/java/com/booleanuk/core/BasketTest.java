@@ -24,4 +24,13 @@ class BasketTest {
         Assertions.assertTrue(basket.items.isEmpty());
     }
 
+    @Test
+    public void testHasCapacity() {
+        Basket basket = new Basket();
+        basket.addBagel("normal", 1);
+        basket.addBagel("special", 2);
+
+        boolean hasMoreSpace = basket.hasCapacity();
+        Assertions.assertTrue(hasMoreSpace);
+    }
 }
