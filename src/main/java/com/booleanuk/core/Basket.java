@@ -16,8 +16,13 @@ public class Basket {
     }
 
     public boolean removeBagel(String key) {
-        this.items.remove(key);
-        return true;
+        if (items.get(key) != null) {
+            items.remove(key);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean hasCapacity() {
