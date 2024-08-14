@@ -47,6 +47,12 @@ class BasketTest {
         Assertions.assertEquals(10, basket.max);
     }
 
+    @Test
+    public void testRemoveBagelFromBasketIndicatesIfItemExists() {
+        Basket basket = new Basket();
+        basket.addBagel("normal", 1);
+        boolean itemDoesNotExists = basket.removeBagel("special");
 
-
+        Assertions.assertFalse(itemDoesNotExists);
+    }
 }
